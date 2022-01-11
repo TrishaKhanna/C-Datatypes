@@ -18,7 +18,7 @@ b) void caesar( char *string, int rshift );
 
 
 c) void char2bits(char c, unsigned char bits[8]);
-- This function retrieves bits 0 to 7, from character c, by calling the get_bits8 function(as supplied by the instructor) 8 times.
+- This function retrieves bits 0 to 7, from character c, by calling the get_bits8 function 8 times.
 - The bits received are then stored in the array, bits.
 
 
@@ -27,12 +27,12 @@ d) void bits2str( int bitno, unsigned char *bits, char *bitstr );
 
 
 e) void ushort2bits(unsigned short s, unsigned char bits[16]);
-- This function retrieves bits 0 to 15, from the unsigned short integer, s, by calling the get_bits16 function (as supplied by the instructor) 16 times.
+- This function retrieves bits 0 to 15, from the unsigned short integer, s, by calling the get_bits16 function 16 times.
 - The bits received are then stored in the array, bits.
 
 
 f) void short2bits(short s, unsigned char bits[16] );
-- This function retrieves bits 0 to 15, from the short integer, s, by calling the get_bits16 function (as supplied by the instructor) 16 times.
+- This function retrieves bits 0 to 15, from the short integer, s, by calling the get_bits16 function 16 times.
 - The bits received are then stored in the array, bits.
 
 
