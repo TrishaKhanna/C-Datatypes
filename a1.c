@@ -1,28 +1,7 @@
-/*
- Student Name: Trisha Khanna
- Student ID: 1123248
- Due Date: September 21st, 2021
- Course: CIS*2520
- I have exclusive control over this submission via my password.
- By including this header comment, I certify that:
- 1) I have read and understood the policy on academic integrity.
- 2) I have completed Moodle's module on academic integrity.
- 3) I have achieved at least 80% on the academic integrity quiz
- I assert that this work is my own. I have appropriate acknowledged
- any and all material that I have used, be it directly quoted or
- paraphrased. Furthermore, I certify that this assignment was written
- by me in its entirety.
-*/
-
-
 #include "a1.h"
 #include "get_bits.h"
 
-/* FUNCTION 1: - This function iterates over all the characters in string until the '\0' is reached.
-               - ONLY uppercase and lowercase characters are considered.
-               - All letters are treated as integers equal to the letter position relative to ‘a’ or ‘A’ in the alphabet for 
-                 lowercase and uppercase letters respectively
-               - Finally, this function returns the sum of all values % 26.*/
+/* FUNCTION 1: */
 unsigned char checksum(char *string)
 {
     int lowerCase = 0;
@@ -51,10 +30,7 @@ unsigned char checksum(char *string)
     return total;
 }
 
-/* FUNCTION 2: - This function processes a given string containing only UPPERCASE alphabets and or spaces, followed by the '\0'.
-               - It then replaces each letter in the string by a letter that occurs rshift places further in the alphabets.
-               - Once the letter 'Z' is reached, the shifting of letters continues from the letter 'A' as the starting point.
-               - Spaces are left alone.*/
+/* FUNCTION 2: */
 void caesar( char *string, int rshift )
 {
     int i = 0;
@@ -77,9 +53,7 @@ void caesar( char *string, int rshift )
 
 }
 
-/* FUNCTION 3: - This function retrieves bits 0 to 7, from character c, by calling the get_bits8 function
-                 (as supplied by the instructor) 8 times.
-               - The bits received are then stored in the array, bits.*/
+/* FUNCTION 3: */
 void char2bits(char c, unsigned char bits[8])
 {
     int i = 0;
@@ -92,7 +66,7 @@ void char2bits(char c, unsigned char bits[8])
 
 }
 
-/* FUNCTION 4: - This function converts the first bitno numbers stored in bits into a string in bitstr.*/
+/* FUNCTION 4: */
 void bits2str( int bitno, unsigned char *bits, char *bitstr )
 {
     int i = 0;
@@ -109,9 +83,7 @@ void bits2str( int bitno, unsigned char *bits, char *bitstr )
 }
 
 
-/* FUNCTION 5: - This function retrieves bits 0 to 15, from the unsigned short integer, s, by calling the get_bits16 function
-                 (as supplied by the instructor) 16 times.
-               - The bits received are then stored in the array, bits.*/
+/* FUNCTION 5: */
 void ushort2bits(unsigned short s, unsigned char bits[16])
 {
     int i = 0;
@@ -123,9 +95,7 @@ void ushort2bits(unsigned short s, unsigned char bits[16])
     }
 }
 
-/* FUNCTION 6: - This function retrieves bits 0 to 15, from the short integer, s, by calling the get_bits16 function
-                 (as supplied by the instructor) 16 times.
-               - The bits received are then stored in the array, bits.*/
+/* FUNCTION 6: */
 void short2bits(short s, unsigned char bits[16] )
 {
     int i = 0;
@@ -137,9 +107,7 @@ void short2bits(short s, unsigned char bits[16] )
     }
 }
 
-/* HELPER power Function - This function calculates the power of b; b^(exp).
-                         - It does so by looping and mutliplying variable b, exp times.
-                         - After which it returns the final multiplied value that was obtained from the while loop.*/
+/* HELPER power Function */
 int power(int b, int exp)
 {
     int final = 1;
@@ -154,12 +122,7 @@ int power(int b, int exp)
     return final;
 }
 
-/* FUNCTION 7: - This functions reads and iterates across all the characters from the string bits, until the '\0' is reached
-                 which is not processed.
-               - The characters processed are either 0 or 1.
-               - The function calculates the 2s complement of the binary number it has read; from the Most-Significant Bit to
-                 the Least-Significant Bit.
-               - This 2s complement is then finally returned as a short, at the end of the function. */
+/* FUNCTION 7: */
 short bits2short( char *bits )
 {
     int length = strlen(bits);
